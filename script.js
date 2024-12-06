@@ -48,3 +48,42 @@ window.addEventListener("scroll" , ()=>{
 
 	})
 })
+
+// Get Courses Data using JSON
+let JsonApi = './courses.json'
+let CoursesGrid = document.querySelector(".courses-grid")
+fetch(JsonApi).then(response => response.json()).then(courses =>{
+	courses.forEach(course =>{
+		console.log(course)
+		let courseItem = `
+		<div class="course">
+                <img class="course-img" src="${course.image}" alt="${course.title}">
+                <div class="course-info">
+                    <div class="author">
+                        <div class="author-img">
+                            <img src="${course.authorProfile}" alt="${course.author}">
+                        </div>
+                        <span class="author-name">By <a href="" class="author-name">${course.author}</a></span>
+                    </div>
+                    <a class="course-title" href="">
+                        <h3>${course.title}</h3>
+                    </a>
+                    <div class="course-std">
+                        <span>
+                            <ion-icon name="book-outline"></ion-icon>
+                            ${course.lessonsNum} Lessons
+                        </span>
+                        <span>
+                            <ion-icon name="person-outline"></ion-icon>
+                            ${course.studentsNum} students
+                        </span>
+                    </div>
+                    <div class="buy-course">
+                        <span class="price">${course.price}</span>
+                        <button id="addTocart">Add To Cart<ion-icon name="cart-outline"></ion-icon></button>
+                    </div>
+                </div>
+            </div>`
+			CoursesGrid.innerHTML += courseItem
+	})
+})

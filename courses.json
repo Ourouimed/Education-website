@@ -1,0 +1,56 @@
+[
+    { 
+        "title" : "The Complete REACTJS Course 2024",
+        "author" : "Ourouimed",
+        "authorProfile" : "./media/team/person1.png",
+        "lessonsNum" : 22,
+        "studentsNum" : "8.2k",
+        "image" : "./media/courses/reactjs.png",
+        "price" : "10.00$"
+    },
+    { 
+        "title" : "Python Basics Full course for beginners",
+        "author" : "Nicolas goli",
+        "authorProfile" : "./media/team/person.png",
+        "lessonsNum" : 15,
+        "studentsNum" : "10.2k",
+        "image" : "./media/courses/python.png",
+        "price" : "Free"
+    },
+    { 
+        "title" : "Flutter & Dart mobile developpement full course",
+        "author" : "Abdulah Kamara",
+        "authorProfile" : "./media/team/person3.png",
+        "lessonsNum" : 23,
+        "studentsNum" : "2.2k",
+        "image" : "./media/courses/flutterDart.png",
+        "price" : "35.00$"
+    },
+    { 
+        "title" : "Robotic & Arduino Full course",
+        "author" : "Issam",
+        "authorProfile" : "./media/team/person.png",
+        "lessonsNum" : 11,
+        "studentsNum" : "500",
+        "image" : "./media/courses/arduino.jpg",
+        "price" : "5.00$"
+    },
+    { 
+        "title" : "Learn Tamazight from zero to hero",
+        "author" : "Bothanot",
+        "authorProfile" : "./media/team/person.png",
+        "lessonsNum" : 11,
+        "studentsNum" : "7.3k",
+        "image" : "./media/courses/tamazight.jpg",
+        "price" : "29.00$"
+    },
+    { 
+        "title" : "Mater the UI/UX Design Full Course",
+        "author" : "John Doe",
+        "authorProfile" : "./media/team/person2.png",
+        "lessonsNum" : 22,
+        "studentsNum" : "12.3k",
+        "image" : "./media/courses/uiux.png",
+        "price" : "Free"
+    }
+]
