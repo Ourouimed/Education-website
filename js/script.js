@@ -1,7 +1,14 @@
 // Sticky Header On scroll
 let header = document.querySelector("header")
+let Logo = header.querySelector(".logo > img")
 window.addEventListener("scroll" , ()=>{
-    window.scrollY > 80 ? header.classList.add("sticky") : header.classList.remove("sticky")
+    if(window.scrollY > 80 ){
+        header.classList.add("sticky") 
+        Logo.src = "./media/LogoDark.png"
+    } else {
+        header.classList.remove("sticky")
+        Logo.src = "./media/LogoWhite.png"
+    }
 })
 
 
@@ -39,22 +46,21 @@ window.addEventListener("scroll" , ()=>{
 		let SecHeight = sec.offsetHeight
 		if(scroll_Y >= OffsetTop && scroll_Y < OffsetTop + SecHeight ) {
 			sec.classList.add("active") 
-			document.getElementById(sec.dataset.link).classList.add("active")
+			// document.getElementById(sec.dataset.link).classList.add("active")
 		}
 		else {
 			sec.classList.remove("active")
-			document.getElementById(sec.dataset.link).classList.remove("active")
+			// document.getElementById(sec.dataset.link).classList.remove("active")
 		}
 
 	})
 })
 
 // Get Courses Data using JSON
-let JsonApi = './courses.json'
+let JsonApi = '../courses.json'
 let CoursesGrid = document.querySelector(".courses-grid")
 fetch(JsonApi).then(response => response.json()).then(courses =>{
 	courses.forEach(course =>{
-		console.log(course)
 		let courseItem = `
 		<div class="course">
                 <img class="course-img" src="${course.image}" alt="${course.title}">
@@ -87,3 +93,13 @@ fetch(JsonApi).then(response => response.json()).then(courses =>{
 			CoursesGrid.innerHTML += courseItem
 	})
 })
+
+// Open Sidebar
+let side_open = document.querySelector("#open-sidebar")
+let side_close = document.querySelector("#close-sidebar")
+let Sidebar = document.querySelector("#sidebar")
+
+const OpenSidebar = ()=> Sidebar.classList.add("active")
+const CloseSidebar = ()=> Sidebar.classList.remove("active")
+side_open.addEventListener("click" , ()=> OpenSidebar())
+side_close.addEventListener("click" , ()=> CloseSidebar())

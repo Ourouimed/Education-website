@@ -5,6 +5,7 @@
     --WhiteBg : #fff;
     --HighLightBg : #cddef8;
     --DarkBgcolor : #020920;
+    --SecondBgcolor : #071b5a;
     --MainColor: #0163f5;
     --SidesPad : 15%;
     --Shadow : 3px 5px 9px #dbdbdb24;
@@ -34,8 +35,12 @@ header {
     transition: .4s ease-in-out;
     color: white;
     gap: 2rem;
+    overflow: hidden;
     z-index: 10;
     top: 0;
+}
+.logo > img {
+    width: 80px;
 }
 header.sticky {
     padding: .7rem var(--SidesPad);
@@ -45,6 +50,20 @@ header.sticky {
 }
 header.sticky #menu li a {
     color: #000;
+}
+
+#open-sidebar {
+    display: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    height: 2.3rem;
+    width: 2.3rem;
+    font-size: 1.5rem;
+    border-radius: 0.6rem;
+    background: var(--MainColor);
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -89,6 +108,7 @@ header.sticky #menu li a {
 }
 section {
     padding: 2rem var(--SidesPad);
+    overflow: hidden;
 }
 #home {
     background: var(--DarkBgcolor);
@@ -180,9 +200,10 @@ section {
 }
 
 .btns .watch-vid #vid-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 3rem;    
     display: flex;
+    aspect-ratio: 1;
+    border: none;
     align-items: center;
     justify-content: center;
     color: var(--MainColor);
@@ -199,6 +220,7 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    background: var(--WhiteBg);
 }
 
 
@@ -515,12 +537,10 @@ section {
 }
 
 
-.team-members{
-    display: flex;
-    flex-wrap: wrap;
-    gap: .8rem;
-    justify-content: center;
-    align-items: center;
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(240px,1fr));
+    gap: 0.8rem;
     margin-top: 1rem;
 }
 .member {
@@ -633,6 +653,113 @@ section {
     width: 100%;
     aspect-ratio: 16/9;
     border-radius: 0.8rem;
+}
+
+
+
+footer {
+    padding: 2rem var(--SidesPad);
+    background: var(--DarkBgcolor);
+    color: white;
+    overflow: hidden;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 2fr repeat(3,1fr)
+
+}
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    color: rgb(194, 194, 194);
+    text-decoration: none;
+    transition: .4s ease;
+    display: block;
+}
+footer ul li a:hover {
+    color: white;
+    transform: translateX(10px);
+}
+
+.social-footer {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+.social-footer li a {
+    color: white;
+    font-size: 1rem;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--SecondBgcolor);
+}
+.social-footer li a:hover{
+    transform: translateY(-.3rem);
+    background: var(--MainColor);
+}
+.footer-logo > img {
+    width: 120px;
+}
+
+
+
+
+
+#sidebar {
+    background: var(--WhiteBg);
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    height: 100vh;
+    width: 300px;
+    padding: 20px;
+    max-width: 90%;
+    box-shadow: var(--Shadow);
+    transform: translateX(-100%);
+    transition: .4s ease;
+}
+
+
+#sidebar.active {
+    transform: translateX(0);
+}
+
+
+#close-sidebar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar ul li a {
+    display: block;
+    padding: 0.5rem 0;
+    color: black;
+    text-decoration: none;
+    transition: .4s ease;
+}
+#sidebar ul li a:hover {
+    color: var(--MainColor);
+    transform: translateX(.5rem);
 }
 @keyframes ColorLoop {
     0% {
