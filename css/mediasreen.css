@@ -21,13 +21,13 @@
     #about .text-sec , #about .img-sec{
         width: 100%;
     }
-    footer {
+    .footer-top {
         grid-template-columns: repeat(2,1fr);
     }
 }
 
 @media (max-width : 640px){
-    footer {
+    .footer-top {
         grid-template-columns: 1fr;
     }
     #contact {
