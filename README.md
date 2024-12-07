@@ -16,7 +16,8 @@ git clone https://github.com/Ourouimed/Education-website.git
 - Contact Us
 
 # Live demo
-Check Live Demo [demo](https://ourouimed.github.io/Education-website)
+Check Live Demo For More[Live preview](https://ourouimed.github.io/Education-website)
+# Check out some screenshots from website preview 
 ![screen shot1](./media/demo/screenShot1.png)
 ![screen shot2](./media/demo/screenShot2.png)
 ![screen shot3](./media/demo/screenShot3.png)
