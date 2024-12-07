@@ -440,14 +440,10 @@ section {
 }
 
 
-.author-img > img {
-    width: 100%;
-    border-radius: 50%;
-}
-
 .author-img {
     width: 2rem;
     height: 2rem;
+    aspect-ratio: 1;
     overflow: hidden;
     padding: 0.2em;
     border: 2px solid var(--MainColor);
@@ -544,7 +540,6 @@ section {
     border: 2px solid #ededed;
     border-radius: 0.6rem;
     overflow: hidden;
-    width: 280px;
     text-align: center;
     transition: .4s ease;
 }
@@ -561,6 +556,7 @@ section {
     display: block;
     border-radius: 50%;
     margin-bottom: .8rem;
+    min-width: 90%;
 }
 
 .member-social {
@@ -653,7 +649,7 @@ section {
 
 
 
-footer {
+.footer-top {
     padding: 2rem var(--SidesPad);
     background: var(--DarkBgcolor);
     color: white;
@@ -704,7 +700,18 @@ footer ul li a:hover {
     width: 120px;
 }
 
+.footer-bot {
+    background: var(--SecondBgcolor);
+    color: white;
+    padding: 10px var(--SidesPad);
+    text-align: center;
+}
 
+.footer-bot > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--MainColor);
+}
 
 
 

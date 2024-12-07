@@ -33,4 +33,23 @@
     #contact {
         grid-template-columns: 1fr;
     }
+    :root {
+        --SidesPad : 10%;
+    }
+}
+
+@media (max-width : 400px){
+    .courses-grid , .team-members , .cat-grid{
+        grid-template-columns: 1fr;
+    }
+    .buy-course {
+        display: block;
+    }
+    #addTocart {
+        width: 100%;
+        justify-content: center;
+    }
+    .course-std > span {
+        font-size: .8em;
+    }
 }

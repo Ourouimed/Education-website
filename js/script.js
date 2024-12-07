@@ -66,9 +66,7 @@ fetch(JsonApi).then(response => response.json()).then(courses =>{
                 <img class="course-img" src="${course.image}" alt="${course.title}">
                 <div class="course-info">
                     <div class="author">
-                        <div class="author-img">
-                            <img src="${course.authorProfile}" alt="${course.author}">
-                        </div>
+                        <img class="author-img" src="${course.authorProfile}" alt="${course.author}">
                         <span class="author-name">By <a href="" class="author-name">${course.author}</a></span>
                     </div>
                     <a class="course-title" href="">
@@ -103,3 +101,7 @@ const OpenSidebar = ()=> Sidebar.classList.add("active")
 const CloseSidebar = ()=> Sidebar.classList.remove("active")
 side_open.addEventListener("click" , ()=> OpenSidebar())
 side_close.addEventListener("click" , ()=> CloseSidebar())
+
+
+// Get Current date for copyrights
+document.querySelector("#date").innerHTML = new Date().getFullYear()
