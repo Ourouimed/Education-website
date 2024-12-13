@@ -57,7 +57,7 @@ window.addEventListener("scroll" , ()=>{
 })
 
 // Get Courses Data using JSON
-let JsonApi = '../courses.json'
+let JsonApi = './courses.json'
 let CoursesGrid = document.querySelector(".courses-grid")
 fetch(JsonApi).then(response => response.json()).then(courses =>{
 	courses.forEach(course =>{
@@ -90,6 +90,8 @@ fetch(JsonApi).then(response => response.json()).then(courses =>{
             </div>`
 			CoursesGrid.innerHTML += courseItem
 	})
+}).catch(error =>{
+    console.error(error)
 })
 
 // Open Sidebar
